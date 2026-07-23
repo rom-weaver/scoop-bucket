@@ -1,0 +1,21 @@
+{
+  "version": "0.7.1",
+  "description": "Local-first offline toolkit for ROMs and ROM hack patches",
+  "homepage": "https://rom-weaver.com",
+  "license": "AGPL-3.0-or-later",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/brandonocasey/rom-weaver/releases/download/v0.7.1/rom-weaver-win32-x64-msvc.exe#/rom-weaver.exe",
+      "hash": "c161b7a0a0706e4e57463a5005282e919ab991ee25162b8f38efc6b62991d5b9"
+    },
+    "32bit": {
+      "url": "https://github.com/brandonocasey/rom-weaver/releases/download/v0.7.1/rom-weaver-win32-ia32-msvc.exe#/rom-weaver.exe",
+      "hash": "f78a4acb6314c728d004a20d8dfadaa68018ccb998b4a79da9cdc85d557edd94"
+    },
+    "arm64": {
+      "url": "https://github.com/brandonocasey/rom-weaver/releases/download/v0.7.1/rom-weaver-win32-arm64-msvc.exe#/rom-weaver.exe",
+      "hash": "4a06dcaaaa3a1e557185b110976349bc041d8bea430bb1440d9b390c479a218f"
+    }
+  },
+  "bin": "rom-weaver.exe"
+}
