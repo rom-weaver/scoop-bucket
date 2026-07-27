@@ -1,12 +1,12 @@
 # scoop-bucket
 
-[Scoop](https://scoop.sh) bucket for [rom-weaver](https://github.com/brandonocasey/rom-weaver),
+[Scoop](https://scoop.sh) bucket for [rom-weaver](https://github.com/rom-weaver/rom-weaver),
 a local-first offline toolkit for ROMs and ROM hack patches.
 
 ## Install
 
 ```powershell
-scoop bucket add brandonocasey https://github.com/brandonocasey/scoop-bucket
+scoop bucket add rom-weaver https://github.com/rom-weaver/scoop-bucket
 scoop install rom-weaver
 ```
 
@@ -14,7 +14,7 @@ scoop install rom-weaver
 
 | Manifest | Upstream |
 | --- | --- |
-| `bucket/rom-weaver.json` | [brandonocasey/rom-weaver](https://github.com/brandonocasey/rom-weaver) |
+| `bucket/rom-weaver.json` | [rom-weaver/rom-weaver](https://github.com/rom-weaver/rom-weaver) |
 
 Manifests here are generated, not hand-edited. Each stable rom-weaver release
 runs `scripts/generate-scoop-manifest.mjs` in the upstream repository and pushes
