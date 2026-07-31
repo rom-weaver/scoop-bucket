@@ -1,20 +1,20 @@
 {
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "Local-first offline toolkit for ROMs and ROM hack patches",
   "homepage": "https://rom-weaver.com",
   "license": "AGPL-3.0-or-later",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.10.1/rom-weaver-win32-x64-msvc.exe#/rom-weaver.exe",
-      "hash": "7c0243579df167b8d94fcfceb35919d269716af33e31f941caa3787769f30ebd"
+      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.10.2/rom-weaver-win32-x64-msvc.exe#/rom-weaver.exe",
+      "hash": "36963a74ae234bdd25f8742605b04391931734ec7c1d2662e9cd2f8ade5f71e6"
     },
     "32bit": {
-      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.10.1/rom-weaver-win32-ia32-msvc.exe#/rom-weaver.exe",
-      "hash": "5954293229615bf5cd97e74d9e34e50d409209c303468b33bf39ca1723f781c4"
+      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.10.2/rom-weaver-win32-ia32-msvc.exe#/rom-weaver.exe",
+      "hash": "397ff48583617b736039147c0fa387075fc20424b348c5b78ea6511214c1097a"
     },
     "arm64": {
-      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.10.1/rom-weaver-win32-arm64-msvc.exe#/rom-weaver.exe",
-      "hash": "23658361ec50f8ec1267a96821b325f535a878a7b91a82440132c4bf3df6365c"
+      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.10.2/rom-weaver-win32-arm64-msvc.exe#/rom-weaver.exe",
+      "hash": "8c3b660c192452c3deba4c71825da4bd78cb20f6af0eb31fe7b018a02c83f338"
     }
   },
   "bin": "rom-weaver.exe"
