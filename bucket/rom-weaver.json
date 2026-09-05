@@ -1,21 +1,53 @@
 {
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Local-first offline toolkit for ROMs and ROM hack patches",
   "homepage": "https://rom-weaver.com",
   "license": "AGPL-3.0-or-later",
+  "depends": [
+    "brotli"
+  ],
   "architecture": {
     "64bit": {
-      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.13.0/rom-weaver-win32-x64-msvc.tar.gz",
-      "hash": "fd886f15e7a7d35fe7dd25e83a15c9b8e93fd6f977fd5c07b06146287d0c688e"
+      "url": [
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.0/rom-weaver-win32-x64-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.0/rom-weaver-identify-data.tar.br"
+      ],
+      "hash": [
+        "e50478c8643ac038cbea359b22e2f6c84e6884ee840a65fa70aea62759a1c86d",
+        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94"
+      ]
     },
     "32bit": {
-      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.13.0/rom-weaver-win32-ia32-msvc.tar.gz",
-      "hash": "b50c15360432ccb60d1238060202a0e85cd7c9bf15de41f1ec9bef9ab636166b"
+      "url": [
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.0/rom-weaver-win32-ia32-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.0/rom-weaver-identify-data.tar.br"
+      ],
+      "hash": [
+        "54aa3bab9cd0f41c755941df0fbc2fdab5cc40ec01992409ad176d45ebb8992d",
+        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94"
+      ]
     },
     "arm64": {
-      "url": "https://github.com/rom-weaver/rom-weaver/releases/download/v0.13.0/rom-weaver-win32-arm64-msvc.tar.gz",
-      "hash": "31f66db57ea1a715ee8ed3fe9551752fa18b9e47334b7e021b19d35f625b8fe1"
+      "url": [
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.0/rom-weaver-win32-arm64-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.0/rom-weaver-identify-data.tar.br"
+      ],
+      "hash": [
+        "7d356af3cc6e51b965936a7f932cde9b12da14db120bcb2329f6bc5531caf2d2",
+        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94"
+      ]
     }
   },
-  "bin": "rom-weaver.exe"
+  "bin": "rom-weaver.exe",
+  "installer": {
+    "script": [
+      "$identifyArchive = Join-Path $dir \"rom-weaver-identify-data.tar.br\"",
+      "$identifyTar = Join-Path $dir \"rom-weaver-identify-data.tar\"",
+      "& brotli --decompress --force --output $identifyTar $identifyArchive",
+      "if ($LASTEXITCODE -ne 0) { throw \"failed to decompress identify data\" }",
+      "& tar --extract --file $identifyTar --directory $dir",
+      "if ($LASTEXITCODE -ne 0) { throw \"failed to extract identify data\" }",
+      "Remove-Item $identifyArchive, $identifyTar -Force"
+    ]
+  }
 }
