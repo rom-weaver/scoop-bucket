@@ -1,5 +1,5 @@
 {
-  "version": "0.14.1",
+  "version": "0.15.1",
   "description": "Local-first offline toolkit for ROMs and ROM hack patches",
   "homepage": "https://rom-weaver.com",
   "license": "AGPL-3.0-or-later",
@@ -9,32 +9,38 @@
   "architecture": {
     "64bit": {
       "url": [
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.1/rom-weaver-win32-x64-msvc.tar.gz",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.1/rom-weaver-identify-data.tar.br"
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-win32-x64-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-identify-data.tar.br",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-cli-assets.zip"
       ],
       "hash": [
-        "72b6e9bdb39e0356ad24d7c508e3c1077e0c7e5b64e0f456f729d743f9f095c4",
-        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94"
+        "930a9e5a78f5eb7c8d785439d79c2041e48f876940683e78fe7255b58a5673c8",
+        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94",
+        "1d5ca1196b9a841cfe8f1da3da95419a95043066e39cc8b1d80c8c0ae49658e9"
       ]
     },
     "32bit": {
       "url": [
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.1/rom-weaver-win32-ia32-msvc.tar.gz",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.1/rom-weaver-identify-data.tar.br"
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-win32-ia32-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-identify-data.tar.br",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-cli-assets.zip"
       ],
       "hash": [
-        "5ae153deb172ce71d1ca0c4277ae6eb228858214d2fc52f7921cb795451654d3",
-        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94"
+        "99f775042afc46d838fdd10307bf9bd3c40f95535e7f0beb7a14fa014b8e01c6",
+        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94",
+        "1d5ca1196b9a841cfe8f1da3da95419a95043066e39cc8b1d80c8c0ae49658e9"
       ]
     },
     "arm64": {
       "url": [
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.1/rom-weaver-win32-arm64-msvc.tar.gz",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.14.1/rom-weaver-identify-data.tar.br"
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-win32-arm64-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-identify-data.tar.br",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.15.1/rom-weaver-cli-assets.zip"
       ],
       "hash": [
-        "0d44cde46f9179342630a161be1d412adc233d5d0c1e99e0ad26070758154148",
-        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94"
+        "a2425a7b4d7d3d2e5504d8cec71db7358bd1b8ab131c384da8c7ef5185e35299",
+        "efa946c60e7b9891d7c74b094a7d4a012fe92852975c39ec2d1a9eadb2822b94",
+        "1d5ca1196b9a841cfe8f1da3da95419a95043066e39cc8b1d80c8c0ae49658e9"
       ]
     }
   },
@@ -47,7 +53,11 @@
       "if ($LASTEXITCODE -ne 0) { throw \"failed to decompress identify data\" }",
       "& tar --extract --file $identifyTar --directory $dir",
       "if ($LASTEXITCODE -ne 0) { throw \"failed to extract identify data\" }",
-      "Remove-Item $identifyArchive, $identifyTar -Force"
+      "Remove-Item $identifyArchive, $identifyTar -Force",
+      "$docsArchive = Join-Path $dir \"rom-weaver-cli-assets.zip\"",
+      "$docsDir = Join-Path $dir \"docs\"",
+      "Expand-Archive -LiteralPath $docsArchive -DestinationPath $docsDir -Force",
+      "Remove-Item $docsArchive -Force"
     ]
   }
 }
