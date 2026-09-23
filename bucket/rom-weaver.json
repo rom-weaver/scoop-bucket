@@ -1,5 +1,5 @@
 {
-  "version": "0.16.1",
+  "version": "0.17.0",
   "description": "Local-first offline toolkit for ROMs and ROM hack patches",
   "homepage": "https://rom-weaver.com",
   "license": "AGPL-3.0-or-later",
@@ -9,38 +9,38 @@
   "architecture": {
     "64bit": {
       "url": [
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-win32-x64-msvc.tar.gz",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-identify-data.tar.br",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-cli-assets.zip"
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-win32-x64-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-identify-data.tar.br",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-cli-assets.zip"
       ],
       "hash": [
-        "8bb54e5f2744f617e6d7bc866a482a7c65d981fd34ea72e5b0f568f0effd3218",
+        "667e6c5051601790b688e9ebbd2c1a7e81c5b81ec5ba38aa7fbd6f80b568c040",
         "4c920b678761a19ff533a5a95c3f9c750a094ba73e5fce8b888c98bf904ef40a",
-        "f15c69ced5daba0d4e06ceadf5d15d5bfd0e2b915cb8d0eebab02a0f201f690c"
+        "95540a12b155085f06cc48ac6475da21eb4eb1c05aecbb88c4aa8db890b38f1b"
       ]
     },
     "32bit": {
       "url": [
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-win32-ia32-msvc.tar.gz",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-identify-data.tar.br",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-cli-assets.zip"
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-win32-ia32-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-identify-data.tar.br",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-cli-assets.zip"
       ],
       "hash": [
-        "09c303d829487052e99364bf1787a934f7dbb4913561fd1985e0a2da5434d013",
+        "e72025368efc5b6ee311292bcd312970e42f5b1416ab88298ef8cb1ece1cb9b6",
         "4c920b678761a19ff533a5a95c3f9c750a094ba73e5fce8b888c98bf904ef40a",
-        "f15c69ced5daba0d4e06ceadf5d15d5bfd0e2b915cb8d0eebab02a0f201f690c"
+        "95540a12b155085f06cc48ac6475da21eb4eb1c05aecbb88c4aa8db890b38f1b"
       ]
     },
     "arm64": {
       "url": [
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-win32-arm64-msvc.tar.gz",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-identify-data.tar.br",
-        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.16.1/rom-weaver-cli-assets.zip"
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-win32-arm64-msvc.tar.gz",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-identify-data.tar.br",
+        "https://github.com/rom-weaver/rom-weaver/releases/download/v0.17.0/rom-weaver-cli-assets.zip"
       ],
       "hash": [
-        "6a06375c53c7362ce415375723bc112df810c9d4b3ccc628c0416b6ff33a6769",
+        "ee20d32e1ba1a62d79f41ec73b35932636ab31113702b584c4bc1b7dc54b08ac",
         "4c920b678761a19ff533a5a95c3f9c750a094ba73e5fce8b888c98bf904ef40a",
-        "f15c69ced5daba0d4e06ceadf5d15d5bfd0e2b915cb8d0eebab02a0f201f690c"
+        "95540a12b155085f06cc48ac6475da21eb4eb1c05aecbb88c4aa8db890b38f1b"
       ]
     }
   },
